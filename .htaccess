@@ -1,0 +1,16 @@
+# Disable Directory Listings
+Options -Indexes
+
+# Protect Sensitive Files (Apache 2.4 Syntax)
+<FilesMatch "\.(sql|md|log|json|bak|config|env|htaccess)$">
+    Require all denied
+</FilesMatch>
+
+# Prevent Script Injection
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{QUERY_STRING} (<|%3C).*script.*(>|%3E) [NC,OR]
+    RewriteCond %{QUERY_STRING} GLOBALS(=|\[|\%[0-9A-Z]{0,2}) [OR]
+    RewriteCond %{QUERY_STRING} _REQUEST(=|\[|\%[0-9A-Z]{0,2})
+    RewriteRule ^(.*)$ index.php [F,L]
+</IfModule>

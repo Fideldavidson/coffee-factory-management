@@ -1,0 +1,4 @@
+/* Utility to disable transitions */
+body.no-transition * {
+    transition: none !important;
+}

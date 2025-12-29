@@ -1,0 +1,125 @@
+/* Sidebar Expansion Styles */
+:root {
+    --sidebar-width-expanded: 250px;
+}
+
+/* Expanded State on Body */
+body.sidebar-expanded .sidebar {
+    width: var(--sidebar-width-expanded);
+}
+
+body.sidebar-expanded .main-content {
+    margin-left: var(--sidebar-width-expanded);
+}
+
+/* Logo Text Visibility */
+body.sidebar-expanded .sidebar-logo span {
+    display: inline-block;
+    margin-left: 12px;
+    font-weight: 700;
+    white-space: nowrap;
+    opacity: 1;
+    animation: fadeIn 0.3s ease forwards;
+}
+
+/* Nav Item Alignment */
+body.sidebar-expanded .nav-item {
+    justify-content: flex-start;
+    /* Align left */
+    padding-left: 20px;
+    width: 220px;
+    /* Wider button */
+}
+
+/* Nav Item Text */
+body.sidebar-expanded .nav-item span {
+    position: static;
+    /* Not absolute tooltip anymore */
+    transform: none;
+    opacity: 1;
+    visibility: visible;
+    background: transparent;
+    color: inherit;
+    box-shadow: none;
+    padding: 0;
+    pointer-events: auto;
+    margin-left: 16px;
+    font-size: 14px;
+}
+
+/* Hide tooltip arrow in expanded mode */
+body.sidebar-expanded .nav-item span::before {
+    display: none;
+}
+
+/* Icon Spacing */
+body.sidebar-expanded .nav-item i {
+    text-align: center;
+    width: 24px;
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateX(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Ensure mobile sidebar works correctly */
+@media (max-width: 768px) {
+    .sidebar {
+        transform: translateX(-100%);
+        width: 250px;
+        /* Always wide on mobile when shown */
+        transition: transform 0.3s ease;
+    }
+
+    .sidebar.show {
+        transform: translateX(0);
+        left: 0;
+        /* Reset */
+    }
+
+    .main-content {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    /* Mobile always shows text */
+    .sidebar-logo span {
+        display: inline-block;
+        margin-left: 12px;
+    }
+
+    .nav-item {
+        justify-content: flex-start;
+        padding-left: 20px;
+        width: 100%;
+    }
+
+    .nav-item span {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        background: transparent;
+        color: inherit;
+        box-shadow: none;
+        padding: 0;
+        margin-left: 16px;
+    }
+
+    .nav-item span::before {
+        display: none;
+    }
+
+    body.sidebar-expanded .main-content {
+        margin-left: 0;
+        /* No push on mobile */
+    }
+}
