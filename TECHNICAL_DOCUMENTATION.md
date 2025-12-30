@@ -96,9 +96,3 @@ When a clerk clicks **"Register Farmer"**:
 7. **Redirect**: The clerk is sent back to the registry with a success "Flash Message."
 
 ---
-
-## 7. Presentation Suggestions for the User
-
-- **Focus on Security**: Emphasize that the system is "Audit Ready" and "Hardened against common web attacks."
-- **Focus on Traceability**: Highlight how the system tracks coffee from the moment a farmer drops it off until it's ready for export.
-- **Focus on UX**: Show off the "Coffee Pop" theme and how the dashboards differ for Managers vs. Farmers.
