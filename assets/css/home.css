@@ -352,22 +352,6 @@ body.home-page {
   overflow: hidden;
 }
 
-.feature-card::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 4px;
-  background: var(--gradient-primary);
-  transform: scaleX(0);
-  transition: transform 0.4s ease;
-}
-
-.feature-card:hover::before {
-  transform: scaleX(1);
-}
-
 .feature-card:hover {
   transform: translateY(-8px);
   box-shadow: var(--shadow-hover);

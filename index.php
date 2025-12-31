@@ -156,7 +156,6 @@ if (isLoggedIn()) {
     <footer class="home-footer">
         <div class="footer-container">
             <div class="footer-logo">
-                <img src="<?php echo baseUrl('/assets/images/coffee-icon.png'); ?>" alt="Coffee Icon">
                 <span>Meru Coffee Co-op</span>
             </div>
             <p class="footer-description">
