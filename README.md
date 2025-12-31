@@ -24,6 +24,25 @@ A comprehensive PHP-based Coffee Factory Management System for managing farmers,
 - **Clerk Dashboard**: Operational focused view for recording deliveries and monitoring processing stages.
 - **Farmer Portal**: Transparent view for farmers to track weight, grade, and historical delivery trends.
 
+## Screenshots
+
+Experience the premium, coffee-themed interface of the Coffee Factory Management System:
+
+![Homepage](screenshots/homepage.png)
+_Landing page with modern design and clear call-to-action_
+
+![Login Page](screenshots/login.png)
+_Secure authentication with elegant UI_
+
+![Manager Dashboard](screenshots/manager-dashboard.png)
+_Comprehensive overview with KPIs and quick actions_
+
+![Delivery Entry](screenshots/delivery-entry.png)
+_Streamlined delivery recording with premium form design_
+
+![Clerk Dashboard](screenshots/clerk-dashboard.png)
+_Operations-focused dashboard for day-to-day tasks_
+
 ## Installation
 
 ### Prerequisites
@@ -36,22 +55,26 @@ A comprehensive PHP-based Coffee Factory Management System for managing farmers,
 ### Setup Instructions
 
 1. **Install XAMPP**
+
    - Download from [https://www.apachefriends.org/](https://www.apachefriends.org/)
    - Install and start Apache and MySQL services
 
 2. **Clone/Copy Project**
+
    ```bash
    # Copy the project to XAMPP htdocs folder
    # Default location: C:\xampp\htdocs\coffee-factory-management-system
    ```
 
 3. **Create Database**
+
    - Open phpMyAdmin: `http://localhost/phpmyadmin`
    - Click "Import" tab
    - Select `database.sql` file from project root
    - Click "Go" to import
 
 4. **Configure Database Connection** (if needed)
+
    - Edit `config/database.php`
    - Update credentials if different from defaults:
      ```php
@@ -68,10 +91,12 @@ A comprehensive PHP-based Coffee Factory Management System for managing farmers,
 ### Default Login Credentials
 
 **Manager Account:**
+
 - Email: `admin@coffee.com`
 - Password: `admin123`
 
 **Clerk Account:**
+
 - Email: `clerk@coffee.com`
 - Password: `admin123`
 
@@ -160,16 +185,19 @@ coffee-factory-management-system/
 ## Troubleshooting
 
 ### Cannot connect to database
+
 - Ensure MySQL is running in XAMPP
 - Check database credentials in `config/database.php`
 - Verify database was imported correctly
 
 ### Page not found errors
+
 - Check that project is in correct XAMPP htdocs folder
 - Verify Apache is running
 - Check file permissions
 
 ### Login not working
+
 - Clear browser cache and cookies
 - Verify database has user records
 - Check PHP session configuration
