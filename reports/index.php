@@ -144,10 +144,10 @@ include __DIR__ . '/../includes/header.php';
         <p class="welcome-subtitle">Generate comprehensive reports and view performance analytics</p>
     </div>
     <div class="date-display flex gap-2" id="exportButtons" data-html2canvas-ignore="true">
-        <button class="btn btn-light" style="background: white; border: 1px solid var(--border-color); height: 50px;" onclick="exportCSV()">
+        <button class="btn btn-secondary" onclick="exportCSV()">
             <i class="fas fa-file-csv"></i> Export CSV
         </button>
-        <button class="btn btn-primary" style="background: var(--primary-dark); height: 50px;" onclick="exportPDF()">
+        <button class="btn btn-primary" onclick="exportPDF()">
             <i class="fas fa-file-pdf"></i> Export PDF
         </button>
     </div>

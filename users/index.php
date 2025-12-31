@@ -34,7 +34,7 @@ include __DIR__ . '/../includes/header.php';
         <p class="welcome-subtitle">Manage system users, roles, and permissions</p>
     </div>
     <div class="date-display">
-        <button onclick="openAddUserModal()" class="btn btn-primary" style="height: 50px; font-weight: 600;">
+        <button onclick="openAddUserModal()" class="btn btn-primary">
             <i class="fas fa-plus"></i> Add New User
         </button>
     </div>
@@ -207,7 +207,7 @@ include __DIR__ . '/../includes/header.php';
 
                 <div class="modal-actions">
                     <button type="button" class="btn btn-secondary" onclick="closeEditUserModal()">Cancel</button>
-                    <button type="submit" class="btn btn-primary" style="background-color: var(--primary-dark);">Save Changes</button>
+                    <button type="submit" class="btn btn-primary">Save Changes</button>
                 </div>
             </form>
         </div>
@@ -393,7 +393,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 <div class="modal-actions">
                     <button type="button" class="btn btn-secondary" onclick="closeAddUserModal()">Cancel</button>
-                    <button type="submit" class="btn btn-primary" style="background-color: var(--primary-dark);">Add User</button>
+                    <button type="submit" class="btn btn-primary">Add User</button>
                 </div>
             </form>
         </div>

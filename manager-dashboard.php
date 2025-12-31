@@ -150,7 +150,7 @@ include __DIR__ . '/includes/header.php';
 
             <?php if (count($recentActivity) > 5): ?>
                     </div> <!-- Close extraRecentActivity -->
-                <button id="viewMoreBtn" onclick="toggleRecentActivity()" class="btn btn-light btn-block" style="margin-top: 16px; width: 100%; border: 1px solid var(--border-color);">
+                <button id="viewMoreBtn" onclick="toggleRecentActivity()" class="btn btn-secondary" style="margin-top: 16px; width: 100%;">
                     View More
                 </button>
             <?php endif; ?>

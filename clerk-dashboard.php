@@ -116,7 +116,7 @@ include __DIR__ . '/includes/header.php';
                 <h3 class="card-title">Pending Processing</h3>
                 <p class="card-description">Deliveries awaiting intake verification and grading</p>
             </div>
-            <a href="<?php echo baseUrl('/deliveries/index.php?status=pending'); ?>" class="btn btn-light btn-sm" style="border: 1px solid var(--border-color);">
+            <a href="<?php echo baseUrl('/deliveries/index.php?status=pending'); ?>" class="btn btn-secondary btn-sm">
                 View Registry
             </a>
         </div>
@@ -158,7 +158,7 @@ include __DIR__ . '/includes/header.php';
                                 <div style="font-size: 18px; font-weight: 700; color: #3E2723;"><?php echo formatWeight($delivery['quantity']); ?></div>
                                 <div style="font-size: 11px; color: #8D6E63; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">Grade: <?php echo e($delivery['grade']); ?></div>
                             </div>
-                            <a href="<?php echo baseUrl('/deliveries/view.php?id=' . $delivery['id']); ?>" class="btn btn-primary" style="height: 40px; padding: 0 20px; border-radius: 8px; font-size: 13px;">
+                            <a href="<?php echo baseUrl('/deliveries/view.php?id=' . $delivery['id']); ?>" class="btn btn-action-primary">
                                 Process <i class="fas fa-arrow-right" style="margin-left: 8px; font-size: 11px;"></i>
                             </a>
                         </div>

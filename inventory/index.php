@@ -135,7 +135,7 @@ include __DIR__ . '/../includes/header.php';
         </div>
         
         <div class="filter-action">
-            <button onclick="openAddBatchModal()" class="btn btn-primary" style="height: 100%; display: flex; align-items: center; background-color: #F8F5F2; color: var(--text-main); border: 1px solid var(--border-color);">
+            <button onclick="openAddBatchModal()" class="btn btn-primary">
                 <i class="fas fa-box-open" style="margin-right: 8px;"></i> Add New Batch
             </button>
         </div>
@@ -433,7 +433,7 @@ window.onclick = function(event) {
 
                 <div class="modal-actions">
                     <button type="button" class="btn btn-secondary" onclick="closeAddBatchModal()">Cancel</button>
-                    <button type="submit" class="btn btn-primary" style="background-color: var(--primary-dark);">Add Batch</button>
+                    <button type="submit" class="btn btn-primary">Add Batch</button>
                 </div>
             </form>
         </div>
@@ -511,7 +511,7 @@ window.onclick = function(event) {
             </div>
 
             <div class="modal-actions" style="margin-top: 24px;">
-                <button type="button" class="btn btn-primary" style="background-color: var(--primary-dark); width: 100%;" onclick="closeViewBatchModal()">Close Details</button>
+                <button type="button" class="btn btn-primary" style="width: 100%;" onclick="closeViewBatchModal()">Close Details</button>
             </div>
         </div>
     </div>
@@ -582,7 +582,7 @@ window.onclick = function(event) {
 
                 <div class="modal-actions">
                     <button type="button" class="btn btn-secondary" onclick="closeProgressBatchModal()">Cancel</button>
-                    <button type="submit" class="btn btn-primary" style="background-color: var(--primary-dark);"><i class="fas fa-save" style="margin-right: 8px;"></i> Save Progress</button>
+                    <button type="submit" class="btn btn-primary"><i class="fas fa-save" style="margin-right: 8px;"></i> Save Progress</button>
                 </div>
             </form>
         </div>

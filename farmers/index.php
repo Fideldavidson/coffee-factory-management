@@ -46,7 +46,7 @@ include __DIR__ . '/../includes/header.php';
         <p class="welcome-subtitle">Manage farmer profiles and track their contributions</p>
     </div>
     <div class="date-display">
-        <button onclick="openAddModal()" class="btn btn-primary" style="height: 50px; font-weight: 600;">
+        <button onclick="openAddModal()" class="btn btn-primary">
             <i class="fas fa-plus"></i> Add New Farmer
         </button>
     </div>
@@ -206,7 +206,7 @@ include __DIR__ . '/../includes/header.php';
                 </div>
                 <div class="modal-actions">
                     <button type="button" class="btn btn-secondary" onclick="closeModal('addFarmerModal')">Cancel</button>
-                    <button type="submit" class="btn btn-primary" style="background-color: var(--primary-dark);">Register Farmer</button>
+                    <button type="submit" class="btn btn-primary">Register Farmer</button>
                 </div>
             </form>
         </div>
@@ -273,7 +273,7 @@ include __DIR__ . '/../includes/header.php';
 
             <div class="modal-actions">
                 <button type="button" class="btn btn-secondary" style="width: 100%; justify-content: center;" onclick="closeModal('viewFarmerModal')">Close</button>
-                <button type="button" class="btn btn-primary" id="viewEditBtn" style="width: 100%; justify-content: center; background-color: var(--primary-dark);">
+                <button type="button" class="btn btn-primary" id="viewEditBtn" style="width: 100%; justify-content: center;">
                     <i class="far fa-edit"></i> Edit Farmer
                 </button>
             </div>
@@ -326,7 +326,7 @@ include __DIR__ . '/../includes/header.php';
 
                 <div class="modal-actions">
                     <button type="button" class="btn btn-secondary" onclick="closeModal('editFarmerModal')">Cancel</button>
-                    <button type="submit" class="btn btn-primary" style="background-color: var(--primary-dark);">Update Farmer</button>
+                    <button type="submit" class="btn btn-primary">Update Farmer</button>
                 </div>
             </form>
         </div>
