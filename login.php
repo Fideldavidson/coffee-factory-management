@@ -30,6 +30,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             // Set session
             setUserSession($user['id'], $user['name'], $user['role'], $user['email'], $user['phone']);
             
+            // Set success message
+            setFlashMessage('success', 'You have successfully logged in!');
+            
             // Redirect based on role
             if ($user['role'] === 'manager') {
                 redirectBase('/manager-dashboard.php');
@@ -59,15 +62,29 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body class="login-page">
-    <?php if ($error): ?>
+    <?php 
+    $flashMessage = getFlashMessage();
+    if ($error || $flashMessage): 
+    ?>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
+            <?php if ($error): ?>
             Swal.fire({
                 icon: 'error',
                 title: 'Login Failed',
                 text: '<?php echo e($error); ?>',
                 confirmButtonColor: '#3E2723'
             });
+            <?php elseif ($flashMessage): ?>
+            Swal.fire({
+                icon: '<?php echo $flashMessage['type'] === 'error' || $flashMessage['type'] === 'danger' ? 'error' : ($flashMessage['type'] === 'warning' ? 'warning' : 'success'); ?>',
+                title: '<?php echo $flashMessage['type'] === 'error' || $flashMessage['type'] === 'danger' ? 'Error!' : ($flashMessage['type'] === 'warning' ? 'Notice' : 'Success!'); ?>',
+                text: '<?php echo addslashes(strip_tags($flashMessage['message'])); ?>',
+                confirmButtonColor: '#3E2723',
+                timer: 4000,
+                timerProgressBar: true
+            });
+            <?php endif; ?>
         });
     </script>
     <?php endif; ?>
